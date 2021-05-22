@@ -29,6 +29,7 @@ public class Main {
         for (Account i : acc_list) {
             System.out.println("|" + acc_list.indexOf(i) + "|" + i.toString());
         }
+//        관리하기 용이하게 인덱스 번호로 설정
         System.out.print("입금할 계좌의 인덱스 번호? ");
         int index_no = sc.nextInt();
         System.out.print("입금할 금액 : ");
