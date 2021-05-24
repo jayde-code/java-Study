@@ -1,2 +1,2 @@
-# java-study
+# Java-study
 Learning Java🔥
