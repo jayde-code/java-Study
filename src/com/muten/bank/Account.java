@@ -1,4 +1,4 @@
-package com.jayde.bank;
+package com.muten.bank;
 
 public class Account {
     private String name;

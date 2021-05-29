@@ -1,4 +1,4 @@
-package com.jayde.bank;
+package com.muten.bank;
 
 import java.util.ArrayList;
 import java.util.Scanner;
