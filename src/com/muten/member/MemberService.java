@@ -1,10 +1,10 @@
 package com.muten.member;
 
 public interface MemberService {
-    public void init();
-    public void insertMember();
-    public void updateMember();
-    public void deleteMember();
-    public void showAll();
-    public Member findById(String id);
+    abstract void init();
+    abstract void insertMember();
+    abstract void updateMember();
+    abstract void deleteMember();
+    abstract void showAll();
+    abstract Member findById(String id);
 }

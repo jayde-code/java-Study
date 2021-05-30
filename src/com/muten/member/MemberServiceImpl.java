@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class MemberServiceImpl implements MemberService {
+
     private static final Scanner sc = new Scanner(System.in);
     private static final List<Member> memberList = new ArrayList<>();
 
