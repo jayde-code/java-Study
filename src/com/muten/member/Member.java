@@ -1,30 +1,40 @@
 package com.muten.member;
 
 public class Member {
-    private String id;
+    private static int indexNo = 1;
+    private int memberId;
+    private String userName;
     private String password;
-    private String email;
 
-    public Member(String id, String password, String email) {
-        this.id = id;
+    public Member(String userName, String password) {
+        this.memberId = indexNo;
+        this.userName = userName;
         this.password = password;
-        this.email = email;
+        indexNo++;
     }
 
     @Override
     public String toString() {
         return "Member{" +
-                "id='" + id + '\'' +
-                ", email='" + email + '\'' +
+                "memberId=" + memberId +
+                ", userName='" + userName + '\'' +
                 '}';
     }
 
-    public String getId() {
-        return id;
+    public int getMemberId() {
+        return memberId;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setMemberId(int memberId) {
+        this.memberId = memberId;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public String getPassword() {
@@ -33,13 +43,5 @@ public class Member {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 }
