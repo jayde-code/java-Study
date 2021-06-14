@@ -1,13 +1,13 @@
 package com.muten.member;
 
 public interface MemberService {
-    abstract void init();
-    abstract void signIn();
-    abstract void delMember();
-    abstract void showMember();
-    abstract void login();
-    abstract void logout();
-    abstract void newBoard();
-    abstract void searchBoard();
-    abstract Member findById(String id);
+    void init();
+    void signIn();
+    void delMember();
+    void showMember();
+    void login();
+    void logout();
+    void newBoard();
+    void searchBoard();
+    Member findById(String id);
 }
