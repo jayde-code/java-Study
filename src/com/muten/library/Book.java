@@ -1,12 +1,5 @@
 package com.muten.library;
 
-import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Locale;
-
 public class Book {
     private static int indexNo = 1;
     private final int bookId;
@@ -15,7 +8,6 @@ public class Book {
     private String borrowDate;
     private String returnDate;
     private int status;
-
 
     public Book(String bookTitle, String author) {
         this.bookId = indexNo;
