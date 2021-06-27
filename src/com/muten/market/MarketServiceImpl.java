@@ -97,6 +97,7 @@ public class MarketServiceImpl implements MarketService {
     @Override
     public void logout() {
         loginMember = null;
+        set.clear();
     }
 
     @Override
