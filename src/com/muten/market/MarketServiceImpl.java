@@ -18,9 +18,8 @@ public class MarketServiceImpl implements MarketService {
     public void init() {
         System.out.println("***** MUTEN Market *****");
         if (loginMember == null) {
-            System.out.flush();
             System.out.print("[1] Sign In\n[2] Login\n[0] EXIT\n>> ");
-            String menu = sc.nextLine();
+            String menu = sc.next().trim();
             switch (menu) {
                 case "1":
                     signIn();
@@ -32,9 +31,8 @@ public class MarketServiceImpl implements MarketService {
                     System.exit(0);
             }
         } else {
-            System.out.flush();
             System.out.print("[1] My Info\n[2] Add Cart List\n[3] Show Cart List\n[4] Logout\n>> ");
-            String menu = sc.nextLine();
+            String menu = sc.next().trim();
             switch (menu) {
                 case "1":
                     myInfo();
@@ -55,7 +53,7 @@ public class MarketServiceImpl implements MarketService {
     @Override
     public void signIn() {
         System.out.print("userName: ");
-        String name = sc.nextLine();
+        String name = sc.next().trim();
         String id = name + "@gmail.com";
         if (findById(id) != null) {
             System.out.println("이미 존재하는 아이디입니다.");
@@ -66,7 +64,7 @@ public class MarketServiceImpl implements MarketService {
         } else {
             System.out.println("사용 가능한 아이디입니다.");
             System.out.print("Password: ");
-            String pwd = sc.nextLine();
+            String pwd = sc.next().trim();
             String nid = name + "@gmail.com";
             Member member = new Member(nid, pwd);
             memberList.add(member);
@@ -77,9 +75,9 @@ public class MarketServiceImpl implements MarketService {
     @Override
     public void login() {
         System.out.print("userName: ");
-        String id = sc.next();
+        String id = sc.next().trim();
         System.out.print("password: ");
-        String pwd = sc.next();
+        String pwd = sc.next().trim();
         String loginId = id + "@gmail.com";
 
         if (findById(loginId) == null) {
@@ -103,7 +101,7 @@ public class MarketServiceImpl implements MarketService {
     @Override
     public void addCart() {
         System.out.print("Shopping List >> ");
-        String shopList = sc.next();
+        String shopList = sc.next().trim();
 //        q.offer(shopList);
         set.add(shopList);
     }
